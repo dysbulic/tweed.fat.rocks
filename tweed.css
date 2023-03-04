@@ -1,0 +1,42 @@
+body {
+  background-image: url('plaid.svg');
+  background-size: 15%;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  animation: shift 10s infinite linear;
+}
+
+h1 {
+  font-family: 'FreeSans';
+  font-size: clamp(2rem, 11vw, 13rem);
+  font-weight: bold;
+  background-image: url('Halloween Tartan.svg');
+  background-size: 10%;
+  color: #B31AC7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #33333344;
+  -webkit-text-stroke: 5px #111;
+  filter: drop-shadow(0 0 0.5rem #CCC) hue-rotate(90deg);
+  animation: hue 5s infinite linear;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 0 0;
+    /* backdrop-filter: invert(0); */
+  }
+  50% {
+    background-position: 100% 0;
+    /* backdrop-filter: invert(100%); */
+  }
+  100% {
+    background-position: -100% 200%;
+    /* backdrop-filter: invert(0); */
+  }  
+}
+
+@keyframes hue {
+  0% { filter: drop-shadow(0 0 0.5rem #CCC) hue-rotate(0deg) }
+  100% { filter: drop-shadow(0 0 0.5rem #CCC) hue-rotate(360deg) }
+}
